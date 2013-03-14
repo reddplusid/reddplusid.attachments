@@ -1,0 +1,20 @@
+<div id="reddplusid-attachments" tal:condition="view/available">
+<h3>File attachments</h3>
+<ul>
+    <li tal:on-error="string: " tal:condition="here/attachment1/size">
+        <metal:block use-macro="python:here.widget('attachment1',mode='view')">attach1</metal:block>
+    </li>
+    <li tal:on-error="string: " tal:condition="here/attachment2/size">
+        <metal:block use-macro="python:here.widget('attachment2',mode='view')">attach1</metal:block>
+    </li>
+    <li tal:on-error="string: " tal:condition="here/attachment3/size">
+        <metal:block use-macro="python:here.widget('attachment3',mode='view')">attach1</metal:block>
+    </li>
+    <li tal:on-error="string: " tal:condition="here/attachment4/size">
+        <metal:block use-macro="python:here.widget('attachment4',mode='view')">attach1</metal:block>
+    </li>
+    <li tal:on-error="string: " tal:condition="here/attachment5/size">
+        <metal:block use-macro="python:here.widget('attachment5',mode='view')">attach1</metal:block>
+    </li>
+</ul>
+</div>

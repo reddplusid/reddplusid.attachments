@@ -5,21 +5,21 @@ from Products.Archetypes import atapi
 from Products.ATContentTypes.interfaces import IATContentType
 from zope.interface import Interface
 from five import grok
-from reddplusid.attachments.interfaces import IProductSpecific
+from reddplusid.attachments.interfaces import IProductSpecific, IHasAttachments
 from reddplusid.attachments import MessageFactory as _
 from Products.validation import V_REQUIRED
 
 # Visit http://pypi.python.org/pypi/archetypes.schemaextender for full 
 # documentation on writing extenders
 
-class ExtensionStringField(ExtensionField, atapi.FileField):
+class ExtensionFileField(ExtensionField, atapi.FileField):
     pass
 
 class AttachmentsExtender(grok.Adapter):
 
     # This applies to all AT Content Types, change this to
     # the specific content type interface you want to extend
-    grok.context(IATContentType)
+    grok.context(IHasAttachments)
 
     grok.implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
     grok.provides(IOrderableSchemaExtender)

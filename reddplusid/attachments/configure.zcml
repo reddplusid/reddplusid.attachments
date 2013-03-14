@@ -15,6 +15,11 @@
 
     <include package=".behavior"/>
     <include package=".portlet"/>
+    <include package=".browser"/>
+
+    <class class="Products.ATContentTypes.content.event.ATEvent">
+       <implements interface="reddplusid.attachments.interfaces.IHasAttachments"/>
+   </class>
 
     <!-- -*- extra stuff goes here -*- -->
 
